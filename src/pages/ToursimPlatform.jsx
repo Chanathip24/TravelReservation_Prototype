@@ -29,11 +29,11 @@ const TourismPlatform = () => {
   useEffect(() => {
     carBookings.forEach(booking => {
       if (booking.status === 'pending') {
-        // Random timeout between 5 to 15 seconds for each booking
+        // Random timeout between 5 to 15 seconds 
         const randomTime = Math.floor(Math.random() * (15000 - 5000) + 5000);
         
         setTimeout(() => {
-          // 80% chance of approval, 20% chance of rejection
+          // 80% approve 20% reject
           const newStatus = Math.random() < 0.8 ? 'approved' : 'rejected';
           
           setCarBookings(prevBookings =>
