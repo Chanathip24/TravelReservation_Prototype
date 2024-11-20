@@ -4,7 +4,7 @@ const GuideApplicationForm = ({ onSubmit }) => {
     return (
       <div className="bg-white rounded-lg shadow-sm p-6">
         <h2 className="text-2xl font-semibold mb-4">Apply as Local Guide</h2>
-        <form onSubmit={onSubmit} className="space-y-4">
+        <form onSubmit={onSubmit} id='guide-form' className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">Full Name</label>
             <input name="name" className="w-full p-2 border rounded-lg" required />

@@ -47,7 +47,6 @@ const TourismPlatform = () => {
   }, [carBookings]);
 
   const handleGuideSubmit = (e) => {
-    e.preventDefault();
     const newApplication = {
       id: Date.now(),
       name: e.target.name.value,
