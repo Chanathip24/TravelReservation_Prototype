@@ -7,10 +7,7 @@ vi.mock('../components/GuideApplicationForm', () => ({
   default: ({ onSubmit }) => {
     // Create mock submission
     const handleSubmit = (e) => {
-      // Simulate preventDefault if event exists
-      if (e && typeof e.preventDefault === 'function') {
-        e.preventDefault();
-      }
+
       
       // Call onSubmit with mock data
       onSubmit({
@@ -19,10 +16,6 @@ vi.mock('../components/GuideApplicationForm', () => ({
           experience: { value: "5" },
           languages: { value: "English" },
           description: { value: "Experienced guide" },
-          exampleTourTitle: { value: "City Tour" },
-          exampleTourLocation: { value: "Downtown" },
-          exampleTourDuration: { value: "3" },
-          exampleTourDescription: { value: "Exciting city tour" },
           reset: () => {} // Add a reset method
         }
       });

@@ -22,7 +22,6 @@ const TourismPlatform = () => {
   
   const [activeTab, setActiveTab] = useState("guide");
   const [guideApplications, setGuideApplications] = useState([]);
-  const [tours, setTours] = useState([]);
   const [carBookings, setCarBookings] = useState([]);
 
   // Auto update status for car bookings
@@ -47,6 +46,7 @@ const TourismPlatform = () => {
   }, [carBookings]);
 
   const handleGuideSubmit = (e) => {
+    //e.preventDefault()
     const newApplication = {
       id: Date.now(),
       name: e.target.name.value,
@@ -54,15 +54,11 @@ const TourismPlatform = () => {
       languages: e.target.languages.value,
       description: e.target.description.value,
       status: 'pending',
-      exampleTour: {
-        title: e.target.exampleTourTitle.value,
-        location: e.target.exampleTourLocation.value,
-        duration: e.target.exampleTourDuration.value,
-        description: e.target.exampleTourDescription.value,
-      }
+
     };
     setGuideApplications([...guideApplications, newApplication]);
     e.target.reset();
+    
   };
 
   const handleCarBooking = (formData) => {
@@ -89,7 +85,7 @@ const TourismPlatform = () => {
       app.id === id ? {...app, status} : app
     ));
   };
-
+  console.log(carBookings)
 
 
   return (

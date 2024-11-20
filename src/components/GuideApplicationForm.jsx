@@ -22,24 +22,7 @@ const GuideApplicationForm = ({ onSubmit }) => {
             <textarea name="description" className="w-full p-2 border rounded-lg" rows="4" required />
           </div>
 
-          {/* Example Tour Information Section */}
-          <h3 className="text-xl font-semibold mt-6">Example Tour Information</h3>
-          <div>
-            <label className="block text-sm font-medium mb-1">Tour Title</label>
-            <input name="exampleTourTitle" className="w-full p-2 border rounded-lg" required />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Tour Location</label>
-            <input name="exampleTourLocation" className="w-full p-2 border rounded-lg" required />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Tour Duration (hours)</label>
-            <input name="exampleTourDuration" type="number" className="w-full p-2 border rounded-lg" required />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Tour Description</label>
-            <textarea name="exampleTourDescription" className="w-full p-2 border rounded-lg" rows="4" required />
-          </div>
+
           
           <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
             Submit Application

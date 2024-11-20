@@ -35,22 +35,7 @@ const AdminDashboard = ({
                   {app.status}
                 </span>
 
-                {/* Display Example Tour Details */}
-                <div className="mt-4">
-                  <h4 className="font-semibold text-sm">Example Tour</h4>
-                  <p className="text-sm text-gray-600">
-                    <strong>Title:</strong> {app.exampleTour.title}
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <strong>Location:</strong> {app.exampleTour.location}
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <strong>Duration:</strong> {app.exampleTour.duration} hours
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <strong>Description:</strong> {app.exampleTour.description}
-                  </p>
-                </div>
+                
               </div>
 
               {app.status === "pending" && (
